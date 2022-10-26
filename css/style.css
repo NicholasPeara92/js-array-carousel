@@ -32,7 +32,7 @@
 }
 
 .btn-prev {
-    background-color: grey;
+    background-color: white;
     border-radius: 50%;
     display: inline-block;
     padding: 5px;
@@ -40,11 +40,11 @@
     z-index: 100;
     left: 50%;
     transform: translate(-50%);
-    top: 0;
+    top: 2%;
 }
 
 .btn-next {
-    background-color: grey;
+    background-color: white;
     border-radius: 50%;
     display: inline-block;
     padding: 5px;
@@ -52,5 +52,5 @@
     z-index: 100;
     left: 50%;
     transform: translate(-50%);
-    bottom: 0;
+    bottom: 2%;
 }
