@@ -26,46 +26,49 @@ for (let i = 0; i < images.length; i++) {
         item.classList.add("active");
     }
     
-    btnNext.addEventListener('click', function() {
-        // item.querySelectorAll(".item")[active];
-        
-        
-        if ( active < 1 ) {
-            item.classList.remove("active");
-            active += 1;
-            
-        } else if ( i === 1) {
-            item.classList.add("active");
-            
-        } 
-        
-        if ( i < 2) {
-            item.classList.remove("active");
-
-        } else if ( i === 3) {
-            item.classList.add("active");
-
-        }
-
-        if ( i < 3) {
-            item.classList.remove("active");
-
-
-        } else if ( i === 4) {
-            item.classList.add("active");
-
-        }
-
-        if ( i < 4) {
-            item.classList.remove("active");
-
-
-        } else if ( i === 5) {
-            item.classList.add("active");
-
-        }
-        
-        
-        
-    });
 }
+
+let item = document.querySelectorAll(".item")[active];
+
+btnNext.addEventListener('click', function() {
+    active += 1;
+    
+    // item.querySelectorAll(".item")[2];
+    
+    if ( active < 1 ) {
+        item.classList.remove("active");
+        
+    } else if ( i === 1) {
+        item.classList.add("active");
+        
+    } 
+    
+    if ( i < 2) {
+        item.classList.remove("active");
+
+    } else if ( i === 2) {
+        item.classList.add("active");
+
+    }
+
+    if ( i < 3) {
+        item.classList.remove("active");
+
+
+    } else if ( i === 3) {
+        item.classList.add("active");
+
+    }
+
+    if ( i < 4) {
+        item.classList.remove("active");
+
+
+    } else if ( i === 4) {
+        item.classList.add("active");
+
+    }
+    
+    
+    
+});
