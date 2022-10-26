@@ -2,41 +2,70 @@
 
 // Creare un array contenente le immagini
 
-const img1 = document.createElement("img");
-img1.src = "img/01.jpg";
-const img2 = document.createElement("img");
-img2.src = "img/02.jpg";
-const img3 = document.createElement("img");
-img3.src = "img/03.jpg";
-const img4 = document.createElement("img");
-img4.src = "img/04.jpg";
-const img5 = document.createElement("img");
-img5.src = "img/05.jpg";
 
 const items =document.querySelector(".items");
 
-const images = [img1, img2, img3, img4, img5];
+const images = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg",];
+
 
 const btnNext = document.querySelector(".btn-next");
 const btnPrev = document.querySelector(".btn-prev");
 
-let active = 0
+let active = 0;
 
 for (let i = 0; i < images.length; i++) {
     const photo = images[i];
-    
     let item = document.createElement('div');
+    
     item.classList.add("item");
     items.append(item);
-    item.append(photo);
+    item.innerHTML =`<img src="${photo}"/>`;
 
+    
     if ( i === 0 ) {
         item.classList.add("active");
-    
     }
     
-    
     btnNext.addEventListener('click', function() {
-        active += 1;
+        // item.querySelectorAll(".item")[active];
+        
+        
+        if ( active < 1 ) {
+            item.classList.remove("active");
+            active += 1;
+            
+        } else if ( i === 1) {
+            item.classList.add("active");
+            
+        } 
+        
+        if ( i < 2) {
+            item.classList.remove("active");
+
+        } else if ( i === 3) {
+            item.classList.add("active");
+
+        }
+
+        if ( i < 3) {
+            item.classList.remove("active");
+
+
+        } else if ( i === 4) {
+            item.classList.add("active");
+
+        }
+
+        if ( i < 4) {
+            item.classList.remove("active");
+
+
+        } else if ( i === 5) {
+            item.classList.add("active");
+
+        }
+        
+        
+        
     });
 }
