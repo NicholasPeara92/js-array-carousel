@@ -5,9 +5,12 @@
 }
 
 .container {
-    width: 1000px;
+    width: 900px;
     height: 100vh;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .items {
@@ -36,6 +39,7 @@
     border-radius: 50%;
     display: inline-block;
     padding: 5px;
+    cursor: pointer;
     position: absolute;
     z-index: 100;
     left: 50%;
@@ -48,6 +52,7 @@
     border-radius: 50%;
     display: inline-block;
     padding: 5px;
+    cursor: pointer;
     position: absolute;
     z-index: 100;
     left: 50%;

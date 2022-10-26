@@ -17,12 +17,26 @@ const items =document.querySelector(".items");
 
 const images = [img1, img2, img3, img4, img5];
 
+const btnNext = document.querySelector(".btn-next");
+const btnPrev = document.querySelector(".btn-prev");
+
+let active = 0
+
 for (let i = 0; i < images.length; i++) {
     const photo = images[i];
-
+    
     let item = document.createElement('div');
     item.classList.add("item");
     items.append(item);
     item.append(photo);
+
+    if ( i === 0 ) {
+        item.classList.add("active");
     
+    }
+    
+    
+    btnNext.addEventListener('click', function() {
+        active += 1;
+    });
 }
