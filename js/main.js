@@ -73,8 +73,8 @@ btnNext.addEventListener('click', function() {
 });
 
 btnPrev.addEventListener('click', function() {
-    // item = document.querySelectorAll(".item")[0];
-    // item.classList.remove("active");
+    item = document.querySelectorAll(".item")[active];
+    item.classList.remove("active");
     active -= 1;
     
     if ( active === 5) {
