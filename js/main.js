@@ -66,6 +66,54 @@ btnNext.addEventListener('click', function() {
         
     } else if ( active > 5 ) {
         active === 0;
+        item = document.querySelectorAll(".item")[0];
+        item.classList.add("active");
+    }
+   
+});
+
+btnPrev.addEventListener('click', function() {
+    // item = document.querySelectorAll(".item")[0];
+    // item.classList.remove("active");
+    active -= 1;
+    
+    if ( active === 5) {
+
+        item = document.querySelectorAll(".item")[5];
+        item.classList.remove("active");
+        item = document.querySelectorAll(".item")[4];
+        item.classList.add("active");
+        
+    } else if ( active === 4 ) {
+        item = document.querySelectorAll(".item")[4];
+        item.classList.remove("active");
+        item = document.querySelectorAll(".item")[3];
+        item.classList.add("active");
+
+    } else if ( active === 3 ) {
+        item = document.querySelectorAll(".item")[3];
+        item.classList.remove("active");
+        item = document.querySelectorAll(".item")[2];
+        item.classList.add("active");
+        
+    } else if ( active === 2 ) {
+        item = document.querySelectorAll(".item")[2];
+        item.classList.remove("active");
+        item = document.querySelectorAll(".item")[1];
+        item.classList.add("active");
+        
+    } else if ( active === 1 ) {
+        item = document.querySelectorAll(".item")[1];
+        item.classList.remove("active");
+        item = document.querySelectorAll(".item")[0];
+        item.classList.add("active");
+        
+    } else if ( active < 0 ) {
+        active === 5;
+        item = document.querySelectorAll(".item")[5];
+        item.classList.add("active");
+
+
     }
    
 });
