@@ -16,21 +16,23 @@
 .items {
     position: relative;
     margin-top: 50px;
+    height: 300px;
+
 }
 
 .item {
-    width: 700px;
     height: 300px;
     margin: auto;
     display: none;
 }
 
 .item img {
-    width: 100%;
-    height: 300px;   
+    width: 700px;
+    height: 300px; 
+    object-fit: cover;  
 }
 
-.active {
+.item.active {
     display: block;
 }
 
